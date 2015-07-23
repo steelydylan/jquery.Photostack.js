@@ -37,7 +37,7 @@
 		$this.addClass("js-photostack");
 		$children.each(function(){
 			var $child = $(this);
-			var rand = getRand(opt.degFrom,degTo);
+			var rand = getRand(opt.degFrom,opt.degTo);
 			var rotate = "rotate("+rand+"deg)";
 			$child.css(prefix+"transform",rotate);
 			$child.css("transform",rotate);
