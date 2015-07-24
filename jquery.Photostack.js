@@ -34,6 +34,8 @@
 		var $children = $this.children();
 		var prefix = getPrefix();
 		var zindex = 0;
+		var width = 0;
+		var height = 0;
 		$this.addClass("js-photostack");
 		$children.each(function(){
 			var $child = $(this);
@@ -43,8 +45,21 @@
 			$child.css("transform",rotate);
 			$child.css("z-index",zindex);
 			zindex++;
+			if($child.width() > width){
+				width = $child.width();
+			}
+			if($child.height() > height){
+				height = $child.height();
+			}
 		});
+		$this.width(width);
+		$this.height(height);
+		var finished = true;
 		$this.click(function(){
+			if(!finished){
+				return;
+			}
+			finished = false;
 			var max = 0;
 			$children.each(function(){
 				var current = parseInt($(this).css("z-index"));
@@ -63,7 +78,11 @@
 				$child.css("z-index",0);
 				next();
 			})
-			.animate({top:0,left:0});
+			.animate({top:0,left:0})
+			.queue(function(next){
+				finished = true;
+				next();
+			});
 		});
 	};
 })(jQuery);
