@@ -1,8 +1,10 @@
 # jquery.Photostack.js
 
 ## setup
+```html
 <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="jquery.Photostack.js"></script>
+```
 
 ##HTML
 ```html
@@ -30,6 +32,7 @@ $(".photostack").Photostack();
 ```
 
 ##Options
+```javascript
 // top position to move
 top:40,
 // left position to move
@@ -37,3 +40,4 @@ left:500,
 // custom rotation angles
 degFrom:-20,
 degTo:20
+```
