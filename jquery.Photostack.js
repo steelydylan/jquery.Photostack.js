@@ -1,5 +1,5 @@
 /**
-* jquery.Photostack.js v0.1.0 - Simple Photostack plugin for jQuery
+* jquery.Photostack.js v0.1.1 - Simple Photostack plugin for jQuery
 * https://github.com/steelydylan/jquery.Photostack.js
 * MIT Licensed
 * Copyright (C) 2015 steelydylan http://horicdesign.com
