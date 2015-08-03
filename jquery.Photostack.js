@@ -10,13 +10,13 @@
     }
     var getPrefix = function(){
     	var userAgent = window.navigator.userAgent.toLowerCase();
-    	if(userAgent.indexOf("msie")){
+    	if(userAgent.indexOf("msie") != -1){
     		return "-ms-";
-    	}else if(userAgent.indexOf("chrome") || userAgent.indexOf("safari")){
+    	}else if(userAgent.indexOf("chrome") != -1 || userAgent.indexOf("safari") != -1){
     		return "-webkit-"
-    	}else if(userAgent.indexOf("firefox")){
+    	}else if(userAgent.indexOf("firefox") != -1){
     		return "-moz-";
-    	}else if(userAgent.indexOf("opera")){
+    	}else if(userAgent.indexOf("opera") != -1){
     		return "-o-";
     	}else{
     		return "";
